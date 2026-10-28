@@ -62,6 +62,19 @@
   h3{margin:0 0 .35rem;font-size:1.08rem;color:var(--green)}
   .grid{display:grid;gap:1rem}
   .g3{grid-template-columns:repeat(3,1fr)}
+
+  /* Soft preview lock */
+  #site-lock{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.25rem;background:rgba(21,32,24,.92);backdrop-filter:blur(6px)}
+  #site-lock[hidden]{display:none!important}
+  #site-lock .lock-card{width:min(380px,100%);background:var(--paper);border-radius:1rem;padding:1.5rem 1.35rem;box-shadow:0 16px 40px rgba(0,0,0,.28);border:1px solid var(--line)}
+  #site-lock h2{margin:0 0 .35rem;font-size:1.25rem;color:var(--green-deep)}
+  #site-lock p{margin:0 0 1rem;color:var(--muted);font-size:.95rem}
+  #site-lock label{display:block;font-size:.85rem;font-weight:700;color:var(--green-deep);margin-bottom:.35rem}
+  #site-lock input{width:100%;font:inherit;padding:.7rem .75rem;border:1px solid #cfc8bb;border-radius:.5rem;margin-bottom:.75rem}
+  #site-lock button{width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;padding:.75rem 1rem;border-radius:.5rem;background:var(--accent);color:var(--ink)}
+  #site-lock .lock-err{color:#a33;font-size:.9rem;min-height:1.2em;margin:0 0 .5rem}
+  body.site-locked{overflow:hidden}
+
   @media (max-width:860px){.g3{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:560px){.g3{grid-template-columns:1fr}}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem 1.2rem}
@@ -138,6 +151,20 @@
 </style>
 </head>
 <body>
+
+<div id="site-lock" role="dialog" aria-modal="true" aria-labelledby="site-lock-title">
+  <div class="lock-card">
+    <h2 id="site-lock-title">Preview only</h2>
+    <p>This site isn’t public yet. Enter the preview password to continue.</p>
+    <p class="lock-err" id="site-lock-err" aria-live="polite"></p>
+    <form id="site-lock-form">
+      <label for="site-lock-pw">Password</label>
+      <input id="site-lock-pw" type="password" autocomplete="current-password" required />
+      <button type="submit">Unlock</button>
+    </form>
+  </div>
+</div>
+
 
 <header class="site-header">
   <div class="wrap">
@@ -299,6 +326,41 @@
     <p><a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener">Facebook</a><br /><span style="opacity:.7">© 2026 AJ Gardening &amp; Landscaping Pty Ltd</span></p>
   </div>
 </footer>
+
+
+<script>
+(function () {
+  var KEY = 'aj_site_unlocked';
+  var PASS = 'AjGarden2026';
+  var lock = document.getElementById('site-lock');
+  var form = document.getElementById('site-lock-form');
+  var input = document.getElementById('site-lock-pw');
+  var err = document.getElementById('site-lock-err');
+  if (!lock || !form) return;
+  function unlock() {
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    lock.hidden = true;
+    document.body.classList.remove('site-locked');
+  }
+  try {
+    if (sessionStorage.getItem(KEY) === '1') { unlock(); return; }
+  } catch (e) {}
+  document.body.classList.add('site-locked');
+  lock.hidden = false;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (input.value === PASS) {
+      err.textContent = '';
+      unlock();
+    } else {
+      err.textContent = 'That password isn’t right. Try again.';
+      input.focus();
+      input.select();
+    }
+  });
+  setTimeout(function () { input && input.focus(); }, 50);
+})();
+</script>
 
 </body>
 </html>
