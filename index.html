@@ -330,18 +330,14 @@
           <li>👍 <a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener noreferrer" data-external="facebook">Message us on Facebook</a></li>
         </ul>
       </div>
-      <!--
-        QUOTE FORM — currently uses mailto (opens the visitor's email app).
-        To receive submissions directly, swap the action for a form service, e.g.:
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        (remove enctype="text/plain"), or use Cloudflare Pages Functions / Netlify Forms.
-      -->
-      <form action="mailto:ajgardeningoffice@gmail.com?subject=Quote%20request%20-%20website" method="post" enctype="text/plain">
+      <!-- Quote form → Formspree free plan; notifications to ajgardeningoffice@gmail.com -->
+      <form action="https://formspree.io/f/xnppdeee" method="POST">
+        <input type="hidden" name="_subject" value="Quote request — AJ Gardening website" />
         <label>Name<input type="text" name="name" autocomplete="name" required /></label>
         <label>Suburb<input type="text" name="suburb" autocomplete="address-level2" required /></label>
         <label>Phone<input type="tel" name="phone" autocomplete="tel" required /></label>
-        <label>Email<input type="email" name="email" autocomplete="email" /></label>
-        <label class="full">What do you need?<textarea name="message" placeholder="e.g. regular mowing, garden bed makeover, clean-up…"></textarea></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+        <label class="full">What do you need?<textarea name="message" placeholder="e.g. regular mowing, garden bed makeover, clean-up…" required></textarea></label>
         <button class="btn btn-primary" type="submit">Request my free quote</button>
       </form>
     </div>
