@@ -269,7 +269,7 @@
         <blockquote>“Jason was helpful and communicative from start to finish. I would highly recommend A.J Gardening for all your landscaping needs!”</blockquote>
         <div class="who">Vu Bui <span class="pill">Recommends</span> <span class="via">· via Facebook</span></div>
       </div>
-      <a class="more" href="https://www.facebook.com/AJ.Gardeninghandyman/reviews" target="_blank" rel="noopener">Read all reviews on Facebook →</a>
+      <a class="more" href="https://www.facebook.com/AJ.Gardeninghandyman/reviews/" target="_blank" rel="noopener noreferrer" data-external="facebook">Read all reviews on Facebook →</a>
     </div>
   </section>
 
@@ -297,7 +297,7 @@
           <li>📞 <a href="tel:0493657992">0493 657 992</a></li>
           <li>✉️ <a href="mailto:ajgardeningoffice@gmail.com">ajgardeningoffice@gmail.com</a></li>
           <li>✉️ <a href="mailto:ajgardening20@gmail.com">ajgardening20@gmail.com</a></li>
-          <li>👍 <a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener">Message us on Facebook</a></li>
+          <li>👍 <a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener noreferrer" data-external="facebook">Message us on Facebook</a></li>
         </ul>
       </div>
       <!--
@@ -323,7 +323,7 @@
   <div class="wrap">
     <p><strong>AJ Gardening &amp; Landscaping Pty Ltd</strong><br />CREATE | MAINTAIN | ENHANCE<br />Brisbane west · 4069 &amp; surrounds</p>
     <p><a href="tel:0493657992">0493 657 992</a><br /><a href="mailto:ajgardeningoffice@gmail.com">ajgardeningoffice@gmail.com</a><br /><a href="mailto:ajgardening20@gmail.com">ajgardening20@gmail.com</a></p>
-    <p><a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener">Facebook</a><br /><span style="opacity:.7">© 2026 AJ Gardening &amp; Landscaping Pty Ltd</span></p>
+    <p><a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener noreferrer" data-external="facebook">Facebook</a><br /><span style="opacity:.7">© 2026 AJ Gardening &amp; Landscaping Pty Ltd</span></p>
   </div>
 </footer>
 
@@ -359,6 +359,23 @@
     }
   });
   setTimeout(function () { input && input.focus(); }, 50);
+})();
+</script>
+
+
+<script>
+(function () {
+  document.querySelectorAll('a[data-external="facebook"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      // Keep this tab on our site; open Facebook in a real new tab/window.
+      e.preventDefault();
+      var w = window.open(a.href, '_blank', 'noopener,noreferrer');
+      if (!w) {
+        // Popup blocked — fall back to same-tab only as last resort
+        window.location.href = a.href;
+      }
+    });
+  });
 })();
 </script>
 
