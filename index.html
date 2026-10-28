@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AJ Gardening &amp; Landscaping | Brisbane West 4069</title>
+<meta name="description" content="Local gardening and landscaping for Brisbane's western suburbs (4069 and surrounds). Fully insured, small dedicated team, free quotes. Call 0493 657 992." />
+<link rel="icon" href="assets/logo.png" />
+<meta property="og:title" content="AJ Gardening &amp; Landscaping — Brisbane West" />
+<meta property="og:description" content="CREATE | MAINTAIN | ENHANCE. Local gardening and landscaping for 4069 and surrounds." />
+<meta property="og:image" content="assets/work-1.jpg" />
+<style>
+  :root{
+    --bg:#f7f4ef; --paper:#fff; --ink:#1c2a1f; --muted:#5a6b5e;
+    --green:#2f6b3a; --green-deep:#1e3d28; --accent:#d9a93a; --line:#e6e0d6;
+    --header-h:72px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--green)}
+  section[id],div[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+
+  /* Sticky header */
+  .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(28,42,31,.06)}
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--header-h)}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--green-deep)}
+  .brand img{height:64px!important;width:auto}
+  .brand b{font-size:1rem;line-height:1.15}
+  .brand small{display:block;font-size:.7rem;letter-spacing:.12em;color:var(--muted);font-weight:600}
+  .nav{display:flex;align-items:center;gap:1.1rem;font-size:.95rem}
+  .nav a{color:var(--green-deep);text-decoration:none;font-weight:600;white-space:nowrap}
+  .nav a:hover{color:var(--green);text-decoration:underline}
+  .nav .nav-cta{background:var(--accent);color:var(--ink);padding:.45rem .9rem;border-radius:999px;text-decoration:none}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;background:linear-gradient(90deg,rgba(18,38,24,.86) 0%,rgba(18,38,24,.6) 55%,rgba(18,38,24,.25) 100%),url("assets/work-1.jpg") center 45%/cover no-repeat}
+  .hero .wrap{padding-top:4.25rem;padding-bottom:4.25rem}
+  .hero-inner{max-width:600px;display:flex;flex-direction:column;align-items:flex-start;gap:.9rem}
+  .tagline{letter-spacing:.16em;font-size:.8rem;font-weight:700;border:1px solid rgba(255,255,255,.6);padding:.35rem .8rem;border-radius:999px}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.12;margin:0}
+  .hero p{margin:0;font-size:1.08rem;opacity:.95}
+  .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.4rem}
+  .btn{display:inline-block;padding:.75rem 1.2rem;border-radius:.5rem;text-decoration:none;font-weight:700;line-height:1.2}
+  .btn-primary{background:var(--accent);color:var(--ink)}
+  .btn-ghost{color:#fff;border:2px solid rgba(255,255,255,.8)}
+  .btn:hover{filter:brightness(1.06)}
+
+  /* Trust chips */
+  .trust{background:var(--paper);border-bottom:1px solid var(--line)}
+  .trust .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;padding-top:.85rem;padding-bottom:.85rem}
+  .chip{background:#eef4ef;color:var(--green-deep);font-weight:700;font-size:.92rem;padding:.4rem .9rem;border-radius:999px}
+  .chip::before{content:"✓ ";color:var(--green)}
+
+  /* Sections */
+  .section{padding:2.75rem 0}
+  .section.alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{color:var(--green-deep);margin:0 0 .4rem;font-size:clamp(1.4rem,3vw,1.75rem)}
+  .lead{color:var(--muted);margin:0 0 1.4rem;max-width:44rem}
+  h3{margin:0 0 .35rem;font-size:1.08rem;color:var(--green)}
+  .grid{display:grid;gap:1rem}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:860px){.g3{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.g3{grid-template-columns:1fr}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem 1.2rem}
+  .card p{margin:0;color:var(--muted);font-size:.96rem}
+  .pillar{border-top:4px solid var(--green)}
+  .pillar h3{letter-spacing:.08em;text-transform:uppercase;font-size:1rem}
+
+  /* Gallery */
+  .gallery{display:grid;gap:.8rem;grid-template-columns:repeat(4,1fr)}
+  .gallery figure{margin:0;background:var(--paper);border-radius:.7rem;overflow:hidden;border:1px solid var(--line)}
+  .gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+  .gallery figcaption{padding:.55rem .75rem;font-size:.88rem;color:var(--muted)}
+
+  /* Services */
+  .service{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:.7rem;padding:1rem 1.15rem}
+
+  /* About */
+  .about{display:grid;gap:1.5rem;grid-template-columns:1.2fr 1fr;align-items:center}
+  .about img{width:100%;height:auto;border-radius:.8rem;aspect-ratio:4/3;object-fit:cover;max-height:320px}
+  .about p{margin:0 0 .8rem}
+
+  /* Reviews */
+  .stars{color:#f2b01e;font-size:1.35rem;letter-spacing:.1em;line-height:1}
+  .score{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.6rem;background:#fff8e6;border:1px solid #ecd59a;border-radius:999px;padding:.5rem 1rem;font-weight:700;color:var(--green-deep);margin-bottom:1.2rem}
+  .review{max-width:640px;background:var(--paper);border:1px solid var(--line);border-top:4px solid #f2b01e;border-radius:.8rem;padding:1.3rem 1.4rem;box-shadow:0 8px 22px rgba(28,42,31,.07)}
+  .review blockquote{margin:.7rem 0;font-size:1.1rem;line-height:1.5;color:var(--ink)}
+  .review .who{font-weight:700;color:var(--green-deep)}
+  .review .who .via{font-weight:500;color:var(--muted)}
+  .pill{display:inline-block;background:var(--green);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .55rem;border-radius:999px;margin-left:.35rem;vertical-align:middle}
+  .more{display:inline-block;margin-top:1rem;font-weight:700}
+
+  /* FAQ */
+  .faq{max-width:760px}
+  .faq details{background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.75rem 1rem;margin-bottom:.55rem}
+  .faq summary{cursor:pointer;font-weight:700;color:var(--green-deep)}
+  .faq details p{margin:.5rem 0 0;color:var(--muted)}
+
+  /* Quote band */
+  .quote{background:var(--green-deep);color:#eef4ef}
+  .quote .wrap{display:grid;gap:2rem;grid-template-columns:1fr 1.2fr;padding-top:2.75rem;padding-bottom:2.75rem}
+  .quote h2{color:#fff}
+  .quote a{color:var(--accent)}
+  .quote ul{list-style:none;padding:0;margin:1rem 0 0}
+  .quote li{margin:.35rem 0}
+  form{background:var(--paper);color:var(--ink);border-radius:.8rem;padding:1.2rem;display:grid;gap:.7rem;grid-template-columns:1fr 1fr}
+  form label{display:flex;flex-direction:column;font-size:.85rem;font-weight:700;color:var(--green-deep);gap:.25rem}
+  form .full{grid-column:1/-1}
+  input,textarea{font:inherit;padding:.6rem .7rem;border:1px solid #cfc8bb;border-radius:.45rem;background:#fff;width:100%}
+  textarea{min-height:96px;resize:vertical}
+  form button{grid-column:1/-1;border:0;cursor:pointer;font:inherit;font-size:1rem}
+
+  /* Footer */
+  footer{background:#152018;color:#c9d4cb;font-size:.92rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:1.6rem;padding-bottom:1.6rem}
+  footer a{color:#e8f0ea}
+  footer p{margin:0}
+  footer strong{color:#fff}
+
+  @media (max-width:860px){
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .about,.quote .wrap{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    :root{--header-h:104px}
+    .site-header .wrap{flex-direction:column;align-items:stretch;gap:.3rem;padding-top:.4rem;padding-bottom:.45rem}
+    .brand img{height:52px!important}
+    .nav{gap:.9rem;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:.9rem;padding-bottom:.15rem;scrollbar-width:none}
+    .nav::-webkit-scrollbar{display:none}
+    .hero{background-position:60% 45%}
+    .hero .wrap{padding-top:3rem;padding-bottom:3rem}
+    .section{padding:2.2rem 0}
+    form{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="AJ Gardening &amp; Landscaping — home">
+      <img src="assets/logo.png" alt="AJ Gardening &amp; Landscaping" width="360" height="360" />
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#quote">Free quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero: real AJ job (retaining wall + tropical planting) -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="tagline">CREATE | MAINTAIN | ENHANCE</span>
+        <h1>Gardening &amp; landscaping for Brisbane’s west</h1>
+        <p>A small, dedicated local team looking after gardens in <strong>4069 and the western suburbs</strong> — done with care, done properly.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#quote">Get a free quote</a>
+          <a class="btn btn-ghost" href="tel:0493657992">Call 0493 657 992</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <span class="chip">Fully insured</span>
+      <span class="chip">Local team</span>
+      <span class="chip">Free quotes</span>
+    </div>
+  </div>
+
+  <!-- About + pillars -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="about">
+        <div>
+          <h2>Your local garden crew</h2>
+          <p>We’re a hands-on team based in Brisbane’s west, working with neighbours across 4069 and surrounding suburbs. We take pride in the details — clear quotes, tidy sites, and gardens that suit our climate and stay easy to look after.</p>
+          <p class="lead" style="margin:0">Small enough to care, experienced enough to get it right.</p>
+        </div>
+        <img src="assets/work-4.jpg" alt="Garden bed with bromeliads, river pebbles and steel edging beside a stone feature wall" loading="lazy" width="940" height="788" />
+      </div>
+      <div class="grid g3" style="margin-top:1.5rem">
+        <div class="card pillar"><h3>Create</h3><p>New garden beds, planting and landscaping built for Brisbane conditions.</p></div>
+        <div class="card pillar"><h3>Maintain</h3><p>Reliable regular care so your garden stays neat all year round.</p></div>
+        <div class="card pillar"><h3>Enhance</h3><p>Irrigation, lawn repair and upgrades that lift the whole space.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured work -->
+  <section id="work" class="section alt">
+    <div class="wrap">
+      <h2>Featured work</h2>
+      <p class="lead">A few recent jobs from around Brisbane’s west.</p>
+      <div class="gallery">
+        <figure><img src="assets/work-1.jpg" alt="Block retaining wall with fresh mulch and tropical planting" loading="lazy" width="1600" height="1264" /><figcaption>Retaining wall &amp; tropical planting</figcaption></figure>
+        <figure><img src="assets/work-2.jpg" alt="Terraced garden beds being prepared beside a pool and timber stairs" loading="lazy" width="940" height="788" /><figcaption>Terraced beds by the pool</figcaption></figure>
+        <figure><img src="assets/work-3.jpg" alt="AJ team member working beside a natural stone wall and timber stairs" loading="lazy" width="940" height="788" /><figcaption>Stone wall &amp; stair finishing</figcaption></figure>
+        <figure><img src="assets/work-4.jpg" alt="Bromeliad garden bed with pebbles and steel edging" loading="lazy" width="940" height="788" /><figcaption>Pebble bed with steel edging</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <h2>Our services</h2>
+      <p class="lead">For homes and small commercial sites around 4069 and across Brisbane’s west.</p>
+      <div class="grid g3">
+        <div class="service"><h3>Garden maintenance</h3><p>Mowing and edging, weeding, pruning, hedging, mulching and green-waste removal — one-off or regular.</p></div>
+        <div class="service"><h3>Landscaping &amp; planting</h3><p>New beds, planting and garden makeovers designed to thrive in our climate.</p></div>
+        <div class="service"><h3>Irrigation</h3><p>Watering systems that keep plants and lawns healthy through the dry spells.</p></div>
+        <div class="service"><h3>Lawn care &amp; repair</h3><p>Feeding, weed treatment and repair for patchy or tired lawns — we’ll tell you what’s worth doing.</p></div>
+        <div class="service"><h3>Clean-ups</h3><p>Overgrown gardens, end-of-lease tidy-ups and “it got away from us” jobs, rubbish removed.</p></div>
+        <div class="service"><h3>Ongoing plans</h3><p>Weekly, fortnightly or monthly visits from the same reliable crew.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="section alt">
+    <div class="wrap">
+      <h2>What our neighbours say</h2>
+      <div class="score" aria-label="5 out of 5 stars — 100% recommend from 13 Facebook reviews">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span>100% recommend · 13 Facebook reviews</span>
+      </div>
+      <div class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Jason was helpful and communicative from start to finish. I would highly recommend A.J Gardening for all your landscaping needs!”</blockquote>
+        <div class="who">Vu Bui <span class="pill">Recommends</span> <span class="via">· via Facebook</span></div>
+      </div>
+      <a class="more" href="https://www.facebook.com/AJ.Gardeninghandyman/reviews" target="_blank" rel="noopener">Read all reviews on Facebook →</a>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="section">
+    <div class="wrap">
+      <h2>FAQs</h2>
+      <div class="faq">
+        <details open><summary>Are you insured?</summary><p>Yes — AJ Gardening &amp; Landscaping is fully insured.</p></details>
+        <details><summary>Which areas do you cover?</summary><p>We’re based in 4069 and work across Brisbane’s western suburbs, and further afield when the job fits.</p></details>
+        <details><summary>How do quotes work?</summary><p>Quotes are free. Tell us your suburb and what you need (photos help) and we’ll give you a clear price before any work starts.</p></details>
+        <details><summary>Do you take away green waste?</summary><p>Yes — we leave the site tidy and can remove green waste and rubbish as part of the job.</p></details>
+        <details><summary>How do I book?</summary><p>Use the quote form below, call 0493 657 992, email us, or message us on Facebook.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Contact -->
+  <section id="quote" class="quote" aria-labelledby="quote-title">
+    <div class="wrap" id="contact">
+      <div>
+        <h2 id="quote-title">Ready for a neater garden?</h2>
+        <p>Tell us a little about the job and we’ll get back to you with a free, no-fuss quote.</p>
+        <ul>
+          <li>📞 <a href="tel:0493657992">0493 657 992</a></li>
+          <li>✉️ <a href="mailto:ajgardeningoffice@gmail.com">ajgardeningoffice@gmail.com</a></li>
+          <li>✉️ <a href="mailto:ajgardening20@gmail.com">ajgardening20@gmail.com</a></li>
+          <li>👍 <a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener">Message us on Facebook</a></li>
+        </ul>
+      </div>
+      <!--
+        QUOTE FORM — currently uses mailto (opens the visitor's email app).
+        To receive submissions directly, swap the action for a form service, e.g.:
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        (remove enctype="text/plain"), or use Cloudflare Pages Functions / Netlify Forms.
+      -->
+      <form action="mailto:ajgardeningoffice@gmail.com?subject=Quote%20request%20-%20website" method="post" enctype="text/plain">
+        <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+        <label>Suburb<input type="text" name="suburb" autocomplete="address-level2" required /></label>
+        <label>Phone<input type="tel" name="phone" autocomplete="tel" required /></label>
+        <label>Email<input type="email" name="email" autocomplete="email" /></label>
+        <label class="full">What do you need?<textarea name="message" placeholder="e.g. regular mowing, garden bed makeover, clean-up…"></textarea></label>
+        <button class="btn btn-primary" type="submit">Request my free quote</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>AJ Gardening &amp; Landscaping Pty Ltd</strong><br />CREATE | MAINTAIN | ENHANCE<br />Brisbane west · 4069 &amp; surrounds</p>
+    <p><a href="tel:0493657992">0493 657 992</a><br /><a href="mailto:ajgardeningoffice@gmail.com">ajgardeningoffice@gmail.com</a><br /><a href="mailto:ajgardening20@gmail.com">ajgardening20@gmail.com</a></p>
+    <p><a href="https://www.facebook.com/AJ.Gardeninghandyman/" target="_blank" rel="noopener">Facebook</a><br /><span style="opacity:.7">© 2026 AJ Gardening &amp; Landscaping Pty Ltd</span></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+AJ Gardening & Landscaping static site — open `index.html` in a browser to preview locally (no build step); deploy target is Cloudflare Pages connected to this GitHub repo (build command: none, output directory: `/`).
